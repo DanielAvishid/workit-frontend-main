@@ -1,0 +1,40 @@
+.date-counter-container {
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: rem(10px);
+    padding: rem(10px);
+
+    .date-container {
+        height: fit-content;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        padding-inline-start: rem(45px);
+        gap: rem(2px);
+    }
+
+
+    h4 {
+        font-weight: 500;
+    }
+
+    .date {
+        span {
+            font-size: rem(16px);
+        }
+    }
+
+    .clickable_a1c09750fe {
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        padding-inline-start: rem(8px);
+        color: $primary-text-color;
+        width: rem(40px);
+        height: fit-content;
+        // height: rem(50px);
+    }
+}

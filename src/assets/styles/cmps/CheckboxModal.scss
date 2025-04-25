@@ -1,0 +1,94 @@
+.checkbox-modal {
+    transition: opacity 150ms, transform 150ms;
+    background-color: $primary-background-color;
+    position: sticky;
+    bottom: rem(35px);
+    left: 50%;
+    transform: translateX(-50%);
+    width: rem(800px);
+    height: rem(63px);
+    z-index: 500;
+    border-radius: rem(5px);
+    box-shadow: 0 4px 16px 5px $modal-shadow-color;
+    white-space: nowrap;
+    overflow: hidden;
+
+    .inner-checkbox-modal {
+        height: 100%;
+
+        .tasks-count {
+            background-color: $primary-color;
+            width: rem(63px);
+            font-size: rem(30px);
+            color: $white;
+        }
+
+        .items-selected {
+            width: rem(210px);
+            padding-inline-start: rem(20px);
+
+            .checkbox-modal-title {
+                font-size: rem(24px);
+                font-weight: 100;
+            }
+
+            .tasks-dots-container {
+                height: rem(20px);
+
+                .task-dot {
+                    width: rem(7px);
+                    height: rem(7px);
+                    border-radius: 50%;
+                    margin-inline-end: rem(4px);
+                }
+            }
+
+        }
+
+        .btns-container {
+
+            .delete-tasks {
+                width: 63px;
+                cursor: pointer;
+
+                .delete-icon {
+                    color: $chat-icon-color;
+                    margin-block-end: rem(2px);
+                }
+
+                &:hover {
+                    .delete-icon {
+                        color: $primary-color;
+                    }
+                }
+
+            }
+
+            .close-checkbox-modal {
+
+                width: 63px;
+                cursor: pointer;
+                border-inline-start: 2px solid $table-border;
+
+                &:hover {
+                    >* {
+                        color: $primary-color;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width:600px) {
+    .checkbox-modal {
+        width: fit-content;
+        position: fixed;
+
+        .close-checkbox-modal,
+        .tasks-count {
+            width: 40px !important;
+        }
+
+    }
+}

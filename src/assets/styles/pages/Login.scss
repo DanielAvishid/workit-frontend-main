@@ -1,0 +1,244 @@
+.login {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+
+    >.login-header {
+        vertical-align: baseline;
+
+        >.logo-container {
+            display: flex;
+            align-items: center;
+            // justify-content: center;
+            width: 100%;
+            border-bottom: 1px solid #e0e0e0;
+            height: rem(65px);
+            background-color: #f7f7f7;
+
+            >.logo {
+                transform: rotate(180deg) scaleX(-1);
+                width: min-content;
+                height: 21px;
+                margin-inline-start: rem(21px);
+                margin-inline-end: 5px;
+            }
+
+            >.brand-name {
+                font-family: Poppins, Roboto, "Noto Sans Hebrew", "Noto Kufi Arabic", "Noto Sans JP", sans-serif;
+                font-weight: bold;
+                letter-spacing: -0.5px;
+                font-size: rem(38px);
+                margin-block-end: 6px;
+            }
+        }
+    }
+
+    >.login-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        flex-grow: 1;
+        padding: rem(40px);
+
+        >.login-section {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-block-end: rem(16px);
+
+            >.login-title {
+                font-weight: 200;
+                font-size: rem(40px);
+                line-height: rem(40px);
+                font-family: Figtree, Roboto, "Noto Sans Hebrew", "Noto Kufi Arabic", "Noto Sans JP", sans-serif;
+                color: $primary-text-color;
+                margin-block-end: rem(8px);
+            }
+
+            >.login-container {
+                margin-block-start: rem(28px);
+                margin-block-end: rem(32px);
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+
+                >.label-container {
+                    display: flex;
+                    justify-content: flex-end;
+                    padding-inline-end: 60px;
+
+                    >.label {
+                        min-width: 80px;
+                        position: relative;
+                        top: -10px;
+                        align-self: center;
+                        color: #777;
+                        font-size: rem(16px);
+                        font-family: Figtree, Roboto, "Noto Sans Hebrew", "Noto Kufi Arabic", "Noto Sans JP", sans-serif;
+                        line-height: rem(16px);
+                        font-weight: 300;
+                    }
+
+                    >.input-container {
+                        height: auto;
+                        width: 360px;
+                        height: 60px;
+                        margin-inline-start: rem(12px);
+
+                        >input {
+                            width: 100%;
+                            height: 40px;
+                            border-radius: 4px;
+                            border: 1px solid #ccc;
+                            padding: 6px 12px;
+                            font-size: rem(16px);
+                            font-family: Figtree, Roboto, Noto Sans Hebrew, Noto Kufi Arabic, Noto Sans JP, sans-serif;
+                            color: #555555;
+                            outline: none;
+
+                            &:focus-visible {
+                                border-color: #66afe9;
+                            }
+                        }
+                    }
+                }
+
+                >.login-btn-container {
+                    width: 100%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+
+                    >.login-btn {
+                        width: rem(360px);
+                        cursor: pointer;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        padding: rem(8px) rem(16px);
+                        height: rem(48px);
+                        border: 0;
+                        border-radius: 4px;
+                        background-color: $primary-color;
+                        color: $primary-background-color;
+                        margin-inline-start: rem(32px);
+
+                        >.btn-text {
+                            font-size: rem(18px);
+                            font-weight: 400;
+                            margin-inline-end: rem(12px);
+                        }
+
+                        >.arrow-icon {
+                            width: rem(20px);
+                            height: rem(20px);
+                        }
+                    }
+                }
+
+            }
+
+            >.login-separator {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-block-end: rem(32px);
+
+                >.separator-line {
+                    width: 200px;
+                    border: 0.5px solid #c5c7d0;
+                    margin: 16px;
+                    height: 0;
+                }
+
+                >.guest-title {
+                    font-size: rem(16px);
+                    font-family: Figtree, Roboto, "Noto Sans Hebrew", "Noto Kufi Arabic", "Noto Sans JP", sans-serif;
+                    font-weight: 300;
+                    line-height: rem(16px);
+                    color: #333333;
+                }
+            }
+
+            >.guest-btn {
+                cursor: pointer;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border: 1px solid #c5c7d0;
+                background-color: unset;
+                border-radius: 4px;
+                padding: rem(10px) rem(16px);
+
+                >span {
+                    font-size: rem(14px);
+                    font-family: Figtree, Roboto, "Noto Sans Hebrew", "Noto Kufi Arabic", "Noto Sans JP", sans-serif;
+                    color: #333333;
+                    font-weight: 400;
+                    text-align: center;
+                }
+
+                >.guest-icon {
+                    color: #333333;
+                    margin-inline-end: 4px;
+                    width: 20px;
+                    height: 20px;
+                }
+            }
+
+            >.sign-up-container {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-block: rem(32px);
+                width: 100%;
+                text-align: center;
+
+                >span {
+                    padding: 0 5px;
+                    margin-block: rem(27px);
+                    font-family: Figtree, Roboto, "Noto Sans Hebrew", "Noto Kufi Arabic", "Noto Sans JP", sans-serif;
+                    font-size: rem(16px);
+                    font-weight: 300;
+                    line-height: rem(22px);
+                    color: $primary-text-color;
+                    padding-inline-end: 5px;
+                }
+
+                .sign-up-link {
+                    color: $a-secondary-color;
+                    font-weight: 300;
+                    font-size: rem(16px);
+                    font-family: Figtree, Roboto, "Noto Sans Hebrew", "Noto Kufi Arabic", "Noto Sans JP", sans-serif;
+                    line-height: rem(20px);
+
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 600px) {
+    .login {
+
+        .label-container {
+            padding-inline-end: 0 !important;
+        }
+
+        .input-container {
+            width: 200px !important;
+        }
+
+        .login-btn {
+            width: rem(292px) !important;
+            margin: rem(16px) 0 !important;
+        }
+    }
+}

@@ -1,0 +1,27 @@
+    .table-header {
+
+        .table-row {
+            border-block-start: 1px solid $table-border;
+
+            h6 {
+                color: $chat-icon-color;
+            }
+
+            .add-btn {
+                min-width: 0;
+                width: rem(22px) !important;
+                height: rem(22px) !important;
+                margin-block-start: rem(7px);
+                margin-inline-start: rem(7px);
+
+                svg {
+                    color: $icon-secondary-color;
+                    width: rem(18px);
+                    height: rem(18px);
+                }
+            }
+
+
+
+        }
+    }

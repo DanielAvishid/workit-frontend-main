@@ -1,0 +1,30 @@
+.avatar-group-cmp {
+    .avatarGroupContainer_e9c6f8ecad {
+        align-items: center;
+    }
+
+    .counterContainer_d5f6deb5be.light_e5f15c67a6 {
+        background-color: #333333;
+        border: none;
+    }
+
+    .kindFill_60c23e83e6.colorLight_e5f15c67a6 {
+        background-color: #333333;
+        padding: 0 0;
+    }
+
+    .counterContainer_d5f6deb5be.small_abcc494a6e {
+        height: rem(26px);
+        min-width: rem(26px);
+        margin-block-start: 1px;
+    }
+
+    .kindFill_60c23e83e6.colorLight_e5f15c67a6 {
+        color: $primary-background-color;
+    }
+
+    span {
+        font-size: rem(12px);
+        font-family: Figtree, Roboto, "Noto Sans Hebrew", "Noto Kufi Arabic", "Noto Sans JP", sans-serif;
+    }
+}

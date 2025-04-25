@@ -1,0 +1,107 @@
+.person-picker-container {
+
+    border-radius: 8px;
+    background-color: var(--secondary-background-color);
+    color: var(--primary-text-color);
+    box-shadow: 0 4px 17px 6px rgba(0, 0, 0, .1);
+    padding: 16px;
+    width: 300px;
+    min-width: fit-content;
+    height: 150px;
+
+    .first-title {
+        font-size: 15px;
+        font-weight: 500;
+        line-height: 22.5px;
+        margin-block: .3rem;
+    }
+
+    .second-title {
+        font-size: 14px;
+        line-height: 21px;
+        margin-bottom: 1rem;
+    }
+
+    .member-list-container {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+
+        // .test {
+        //     display: flex;
+        //     align-items: center;
+        //     justify-content: center;
+        //     width: 40px;
+        //     height: 40px;
+        //     border-radius: 50%;
+
+        //     &.selected {
+        //         background-color: var(--color-glitter);
+        //     }
+        // }
+        .person-img-container {
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            padding: 4px;
+            border-radius: 50%;
+            background-color: $primary-background-color;
+
+            &.selected {
+                background-color: var(--color-glitter);
+
+            }
+
+            .avatar-img {
+                width: 32px;
+                height: 32px;
+                cursor: pointer;
+
+
+
+            }
+
+        }
+    }
+}
+
+.chosen-person-filter-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    color: var(--primary-text-color);
+    background-color: var(--primary-selected-color);
+    width: 108px;
+    height: 32px;
+    padding: var(--spacing-xs) var(--spacing-small);
+    padding-left: 11px;
+    border-radius: var(--border-radius-small);
+    cursor: pointer;
+
+    .person-img-txt-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 4px;
+
+        span {
+            font-size: 14px;
+        }
+    }
+
+    .btn-remove-person {
+        align-items: center;
+        background-color: var(--primary-text-color);
+        border-radius: 50%;
+        color: #fff;
+        display: flex;
+        height: 12px;
+        margin-inline-end: 5px;
+        width: 12px;
+        cursor: pointer;
+    }
+}

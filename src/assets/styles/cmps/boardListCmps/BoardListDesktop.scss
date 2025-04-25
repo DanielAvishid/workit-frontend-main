@@ -1,0 +1,132 @@
+.board-list {
+    border-top-left-radius: 8px;
+    background-color: $allgrey-background-color;
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-rows: min-content;
+    padding-block-end: rem(52px);
+    overflow: auto;
+
+    >.header {
+        height: 75px;
+        width: 100%;
+        background-color: $primary-background-color;
+        box-shadow: 0px 3px 12px #e6e9ef;
+        padding-inline: rem(80px);
+
+        >.header-content {
+            display: flex;
+            height: 100%;
+            width: max-content;
+
+            >.titles-container {
+                display: inline-flex;
+                flex-direction: column;
+                justify-content: center;
+                margin-inline-end: rem(12px);
+                height: 100%;
+
+                >.welcome-user {
+                    font-size: rem(14px);
+                    font-family: Figtree, Roboto, "Noto Sans Hebrew", "Noto Kufi Arabic", "Noto Sans JP", sans-serif;
+                    line-height: rem(21px);
+                    color: $primary-text-color;
+                }
+
+                >.welcome-info {
+                    font-size: rem(16px);
+                    font-family: Figtree, Roboto, "Noto Sans Hebrew", "Noto Kufi Arabic", "Noto Sans JP", sans-serif;
+                    font-weight: 500;
+                    color: $primary-text-color;
+                    line-height: rem(22px);
+                }
+            }
+        }
+
+        >.welcome-img {
+            height: 100%;
+            overflow: hidden;
+            width: max-content;
+
+            img {
+                overflow: hidden;
+                // max-height: 88px;
+            }
+        }
+    }
+
+    >.main-container {
+        padding-inline: rem(80px);
+        background-color: $allgrey-background-color;
+
+        >.collapse-boards {
+            display: flex;
+            align-items: center;
+        }
+
+        >.boards-container {
+            height: 100%;
+            width: 100%;
+            background-color: $primary-background-color;
+            margin-block-start: rem(16px);
+            box-shadow: 0px 3px 12px #e6e9ef;
+            border-radius: 8px;
+            display: grid;
+            grid-template-rows: min-content;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            padding: rem(24px);
+
+            .board-card {
+                cursor: pointer;
+                flex-direction: column;
+                border: 1px solid $table-border;
+                padding: 8px;
+                border-radius: 4px;
+                height: 190px;
+                margin: 8px 8px 24px 8px;
+
+                &:hover {
+                    box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.2);
+                    border-color: transparent;
+                }
+
+                .img-container {
+                    display: flex;
+                    margin-block-end: 8px;
+                    background-color: $card-background-color;
+                    border-radius: 4px;
+                    justify-content: center;
+                    min-height: 102px;
+                    overflow: hidden;
+                }
+
+                .board-icon {
+                    width: 22px;
+                    height: 22px;
+                    color: $icon-secondary-color;
+                    margin-inline-end: 6px;
+                }
+
+                .board-title {
+                    color: $primary-text-color;
+                    font-size: rem(16px);
+                    line-height: 24px;
+                    font-weight: 700;
+                    font-family: Figtree, Roboto, "Noto Sans Hebrew", "Noto Kufi Arabic", "Noto Sans JP", sans-serif;
+                }
+
+                .favorite-btn {
+                    width: rem(32px) !important;
+                    height: rem(32px) !important;
+                    min-width: min-content;
+                    margin-inline-end: 4px;
+
+                    svg {
+                        color: $icon-secondary-color;
+                    }
+                }
+            }
+        }
+    }
+}

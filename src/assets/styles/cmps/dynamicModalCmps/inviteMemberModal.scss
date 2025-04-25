@@ -1,0 +1,29 @@
+.invite-member-modal {
+    width: rem(360px);
+    padding: rem(8px) rem(16px) rem(16px);
+
+    >input {
+        height: rem(32px);
+        width: 100%;
+        border-radius: rem(4px);
+        border: 0.8px solid $primary-color;
+        padding: rem(1px) rem(5px) 0 rem(5px);
+        font-size: rem(15px);
+
+        ::placeholder {
+            font-weight: 400;
+            // font-size: rem(15px);
+        }
+    }
+
+    >.header-container {
+        margin-block-end: rem(8px);
+    }
+
+    >.buttons-container {
+        z-index: 500;
+        justify-content: end;
+        margin-block-start: rem(16px);
+        gap: rem(8px);
+    }
+}

@@ -1,0 +1,13 @@
+.group-header {
+    background-color: $primary-background-color;
+    position: sticky;
+    // top: 132px;
+    top: 192px;
+    z-index: 20;
+}
+
+@media (max-width: 600px) {
+    .group-header {
+        top: 160px;
+    }
+}

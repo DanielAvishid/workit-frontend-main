@@ -1,0 +1,42 @@
+.task-preview {
+
+    .status,
+    .priority {
+        border-bottom: 1px solid #d0d4e4;
+    }
+
+    &:hover {
+
+        .table-row {
+
+            box-shadow: 4px 3px 6px -3px $selectable-cluster-border;
+            background-color: $lighter-grey;
+
+            &.checked {
+                background-color: $primary-selected-color;
+            }
+        }
+
+        .task-menu {
+            opacity: 1;
+        }
+    }
+
+    .table-row {
+
+        &.checked {
+            background-color: $primary-selected-color;
+        }
+    }
+
+    .task-menu {
+        opacity: 0;
+        height: 24px;
+        width: 24px;
+
+        >* {
+            z-index: 30;
+        }
+    }
+
+}

@@ -1,0 +1,109 @@
+.dashboard {
+    max-width: 100%;
+    background-color: $grey-background-color;
+    display: grid;
+    gap: rem(10px);
+    padding: rem(10px) 0;
+    border-block-start: 1px solid $table-border;
+    grid-template-columns: rem(290px) 1fr rem(400px);
+    overflow: hidden;
+
+    .right-container {
+        background-color: $grey-background-color;
+        padding-inline-end: rem(10px);
+        display: grid;
+        grid-template-rows: rem(100px) 1fr;
+        gap: rem(10px);
+        overflow: hidden;
+        border-radius: rem(8px);
+        white-space: nowrap;
+
+
+        >* {
+            border-radius: rem(8px);
+            background-color: $primary-background-color;
+            border: 1px solid $table-border;
+        }
+    }
+
+    .upcoming-features {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        overflow-y: auto;
+        position: relative;
+
+        h4 {
+            padding: rem(10px);
+            z-index: 100;
+            background-color: $primary-background-color;
+            position: sticky;
+            top: 0;
+            width: 100%;
+            border-block-end: 0.8px solid $table-border;
+        }
+
+        .tasks-container {
+            width: 100%;
+            padding: rem(10px) rem(10px) 0 rem(10px);
+
+        }
+
+
+        .upcoming-task {
+            display: grid;
+            align-items: center;
+            grid-template-columns: 1fr rem(70px) rem(50px);
+            margin-block-end: rem(10px);
+            border: 0.8px solid $table-border;
+            border-radius: rem(8px);
+            padding: rem(5px) rem(10px) rem(5px) rem(15px);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+            >* {
+                display: flex;
+                justify-content: center;
+                font-weight: 500;
+
+                &.title {
+                    justify-content: start;
+                }
+            }
+
+        }
+
+    }
+
+    h4 {
+        height: fit-content;
+        font-weight: 500;
+    }
+}
+
+@media (max-width: 600px) {
+    .dashboard {
+        margin-block-start: rem(160px);
+        width: 100vw;
+        height: fit-content;
+        grid-template-columns: 1fr;
+
+        h4 {
+            text-align: center;
+        }
+
+        .overall-progress-container {
+            height: min-content;
+            // padding: rem(20px);
+        }
+
+        .right-container {
+            padding: 0;
+        }
+
+
+    }
+
+    .upcoming-features {
+        max-height: 500px;
+    }
+}

@@ -1,0 +1,18 @@
+.labels-summary {
+    cursor: pointer;
+    width: rem(140px);
+    margin: rem(8px);
+    height: rem(24px);
+    background-color: $default-task-val-bgc;
+
+    .summary-item {
+        z-index: 10;
+        height: 100%;
+
+        &:hover {
+            height: 120%;
+            transition: all .2s ease-in-out;
+            border-radius: 2px;
+        }
+    }
+}

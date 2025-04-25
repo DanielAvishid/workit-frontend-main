@@ -1,0 +1,211 @@
+.sign-up {
+    display: grid;
+    grid-template-columns: auto 40%;
+    height: 100vh;
+    width: 100vw;
+
+    >.sign-up-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 100%;
+        background-color: $primary-background-color;
+
+        >.content {
+            display: flex;
+            flex: 1;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            >.heading {
+
+                .title {
+                    text-align: center;
+                    padding: 0 4px;
+                    border: 1px solid transparent;
+                    margin-block-end: rem(8px);
+                    color: $primary-text-color;
+                    font-size: rem(32px);
+                    font-family: Poppins, Roboto, "Noto Sans Hebrew", "Noto Kufi Arabic", "Noto Sans JP", sans-serif;
+                    font-weight: 500;
+                    letter-spacing: -0.5px;
+                    line-height: rem(40px);
+                }
+
+                .sub-title {
+                    text-align: center;
+                    margin-block-end: rem(48px);
+                    padding: 0 4px;
+                    border: 1px solid transparent;
+                    color: $primary-text-color;
+                    font-size: rem(16px);
+                    font-family: Poppins, Roboto, "Noto Sans Hebrew", "Noto Kufi Arabic", "Noto Sans JP", sans-serif;
+                    letter-spacing: -0.1px;
+                    line-height: rem(30px);
+                    font-weight: 400;
+                }
+            }
+
+            >.sign-up-fields {
+                display: grid;
+                gap: 20px;
+                margin-block-end: rem(32px);
+                vertical-align: baseline;
+
+                >.label-container {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    >.label {
+                        color: #777;
+                        font-size: rem(16px);
+                        font-family: Figtree, Roboto, "Noto Sans Hebrew", "Noto Kufi Arabic", "Noto Sans JP", sans-serif;
+                        line-height: rem(16px);
+                        font-weight: 300;
+                        width: rem(72px);
+                    }
+
+                    >.input-container {
+                        height: auto;
+                        width: 348px;
+                        margin-inline-start: rem(12px);
+
+                        >input {
+                            height: 40px;
+                            border-radius: 4px;
+                            border: 1px solid #ccc;
+                            padding: 6px 12px;
+                            font-size: rem(16px);
+                            font-family: Figtree, Roboto, Noto Sans Hebrew, Noto Kufi Arabic, Noto Sans JP, sans-serif;
+                            font-weight: 300;
+                            color: #555;
+                            width: 100%;
+                            outline: none;
+
+                            &:focus-visible {
+                                border-color: #66afe9;
+                            }
+                        }
+                    }
+                }
+
+                >.upload-btn-container {
+                    display: flex;
+                    justify-content: end;
+
+                    >.upload-btn {
+                        cursor: pointer;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        line-height: rem(28px);
+                        font-size: rem(14px);
+                        font-family: Figtree, Roboto, "Noto Sans Hebrew", "Noto Kufi Arabic", "Noto Sans JP", sans-serif;
+                        padding-inline: 16px;
+                        border: 0;
+                        border-radius: 4px;
+                        outline: none;
+                        background-color: $primary-color;
+                        color: $primary-background-color;
+                    }
+
+                }
+
+                >.sign-up-btn {
+                    cursor: pointer;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    padding: rem(8px) rem(16px);
+                    height: rem(48px);
+                    border: 0;
+                    border-radius: 4px;
+                    background-color: $primary-color;
+                    color: $primary-background-color;
+
+                    >.btn-text {
+                        font-size: rem(18px);
+                        font-weight: 400;
+                        margin-inline-end: rem(12px);
+                    }
+
+                    >.arrow-icon {
+                        width: rem(20px);
+                        height: rem(20px);
+                    }
+                }
+            }
+        }
+
+        >.login-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-block-end: rem(64px);
+
+            >.container {
+                display: flex;
+                align-items: center;
+                height: rem(16px);
+
+                >.login-title {
+                    padding: 0 5px;
+                    margin-block: rem(27px);
+                    font-family: Figtree, Roboto, "Noto Sans Hebrew", "Noto Kufi Arabic", "Noto Sans JP", sans-serif;
+                    font-size: rem(16px);
+                    font-weight: 400;
+                    line-height: rem(22px);
+                    color: $primary-text-color;
+                }
+
+                span {
+                    color: $a-secondary-color;
+                    font-weight: 500;
+                    font-size: rem(16px);
+                    font-family: Figtree, Roboto, "Noto Sans Hebrew", "Noto Kufi Arabic", "Noto Sans JP", sans-serif;
+                    line-height: rem(20px);
+
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+    }
+
+    >.aside-img-container {
+        display: flex;
+        justify-content: center;
+        overflow: hidden;
+        background-color: #6161ff;
+
+        >img {
+            width: unset;
+            height: 100%;
+        }
+    }
+}
+
+@media (max-width: 600px) {
+    .sign-up {
+
+        .input-container {
+            width: 200px !important;
+        }
+
+        .upload-btn-container {
+            margin: rem(16px) 0;
+            justify-content: center !important;
+        }
+
+        .content {
+            width: 100vw;
+        }
+
+        .aside-img-container {
+            display: none !important;
+        }
+    }
+}

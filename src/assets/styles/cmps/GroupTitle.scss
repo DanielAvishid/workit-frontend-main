@@ -1,0 +1,61 @@
+.group-title {
+    height: 2.5rem;
+
+    .items-count {
+        margin-inline-start: 4px;
+        opacity: 0;
+        transition: 0.2s;
+        font-size: 0.875rem;
+    }
+
+    &:hover {
+
+        .items-count,
+        .group-menu {
+            opacity: 1;
+        }
+    }
+
+    >.title-name {
+        position: relative;
+
+        .arrow-icon {
+            position: sticky;
+            left: 51px;
+        }
+
+        .title-name-edit {
+            position: sticky;
+            left: 74px;
+        }
+
+        .editableInputWrapper_8e7f29624b {
+            font-family: Poppins, Roboto, "Noto Sans Hebrew", "Noto Kufi Arabic", "Noto Sans JP", sans-serif;
+        }
+    }
+
+    .group-menu-container {
+        margin-inline-end: 4px;
+        position: sticky;
+        left: 0;
+        z-index: 100;
+    }
+
+    .group-menu {
+        opacity: 0;
+        height: 24px;
+        width: 24px;
+
+        >* {
+            z-index: 30;
+        }
+    }
+}
+
+@media (max-width: 600px) {
+    .group-title {
+        height: 3rem;
+        position: sticky;
+        left: 0;
+    }
+}

@@ -1,0 +1,545 @@
+.label-modal {
+    position: absolute;
+    top: 42px;
+    left: 50%;
+    transform: translate(-50%);
+    z-index: 500;
+    // width: min-content;
+    // max-width: 680px; // rem?
+    // min-width: 200px; // rem?
+    width: min-content;
+    background-color: white;
+    box-shadow: 0 8px 16px 0 $modal-shadow-color;
+    border-radius: 8px;
+    overflow: visible;
+
+    .label-content {
+        margin-top: rem(8px);
+        transition: height .15s ease;
+        width: min-content;
+        // max-width: 680px;
+        max-width: min-content;
+        min-width: 200px;
+
+        .label-view-container {
+            position: relative;
+            display: grid;
+            grid-auto-flow: column;
+            gap: 8px; // rem?
+            padding: 16px 24px; // rem?
+            overflow-x: auto;
+            overflow-y: hidden;
+
+            .label-picker {
+                cursor: pointer;
+                position: relative;
+                width: 152px; // rem?
+                height: 32px; // rem?
+                color: #fff;
+                font-size: rem(14px);
+                font-weight: 400;
+                border: none;
+                border-radius: 2px;
+                transition: transform .1s ease-in-out, opacity .1s ease-in-out;
+
+                &:hover {
+                    opacity: .85;
+                }
+
+                &:active {
+                    transform: scale(.95);
+                }
+            }
+        }
+
+        .label-edit-container {
+            // use helper?
+            display: grid;
+            grid-auto-flow: column;
+            row-gap: 8px;
+            align-items: center;
+            padding: 16px 12px 8px;
+            // overflow-x: auto;
+
+            .add-btn-container {
+                text-align: center;
+
+                .add-btn {
+                    width: 152px;
+                    height: 32px;
+                    font-size: rem(14px);
+                    border-color: #e6e9ef;
+                }
+            }
+
+            .label-edit {
+                position: relative;
+
+                .icon-drag {
+                    color: $icon-secondary-color;
+                }
+
+                .color-picker {
+                    padding-block: 0;
+                    position: absolute;
+                    top: 28px;
+                    left: 10px;
+                    max-width: 152px;
+                }
+
+                .label-editable {
+                    display: grid;
+                    grid-template-columns: 24px 128px; // Better way?
+                    align-items: center;
+                    height: 32px;
+                    width: 152px;
+                    padding-inline: 4px;
+                    border: 1px solid #e6e9ef;
+                    border-radius: 4px;
+                    overflow: hidden;
+
+                    .color-btn {
+                        display: grid;
+                        justify-content: center;
+                        align-items: center;
+                        height: 24px;
+                        width: 24px;
+                        border: 1px solid transparent;
+                        border-radius: 4px;
+                    }
+
+                    .label-input {
+                        min-width: 0;
+                        width: 128px;
+                        height: 100%;
+                        font-size: rem(14px);
+                        font-family: Figtree, Roboto, "Noto Sans Hebrew", "Noto Kufi Arabic", "Noto Sans JP", sans-serif;
+                        color: $primary-text-color;
+                        background-color: #fff;
+                        outline: none;
+                        margin-inline: 4px;
+                        border: none;
+                        border-radius: 0 2px 2px 0;
+                        border-width: 1px 1px 1px 0;
+                        border-style: solid;
+                        border-color: transparent;
+
+                        &:focus-visible {
+                            outline: none;
+                        }
+                    }
+
+
+                }
+
+                .icon-remove {
+                    width: 8px;
+                }
+            }
+        }
+    }
+
+    .label-picker-footer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 0 16px 8px 16px;
+
+        .divider {
+            margin: 0 0 8px 0;
+            height: 1px;
+            width: 100%;
+        }
+
+        .edit-btn {
+            font-size: rem(14px);
+            width: 100%;
+            height: 32px;
+            min-width: auto;
+        }
+    }
+
+    .square {
+        z-index: 500;
+        width: 16px;
+        height: 16px;
+        background-color: $primary-background-color;
+        border-radius: 2px;
+        position: absolute;
+        left: 50%;
+        top: -5px;
+        transform: translate(-50%) rotate(45deg);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// .label-modal-container {
+//     z-index: 10;
+//     position: absolute;
+//     max-width: 880px;
+//     top: 42px;
+//     left: 50%;
+//     transform: translate(-50%);
+//     border-radius: 8px;
+//     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, .32);
+//     background-color: white;
+
+//     .label-container {
+//         padding-block-start: 16px;
+//         margin-block-start: 8px;
+//         display: grid;
+//         grid-auto-flow: column;
+//         gap: 8px;
+//         margin-block-end: 8px;
+
+//         .label-btn {
+//             cursor: pointer;
+//             height: 32px;
+//             width: 152px;
+//             text-overflow: ellipsis;
+//             overflow: hidden;
+//             white-space: nowrap;
+//             font-size: rem(14px);
+//             border: none;
+//             border-radius: 2px;
+//             color: $text-color-on-primary;
+
+//             &:hover {
+//                 opacity: .85;
+//             }
+
+//             &:active {
+//                 transform: scale(.95);
+//             }
+//         }
+//     }
+
+//     .modal-layout {
+//         margin-block-end: 10px;
+//         grid-template-columns: rem(8px) minmax(auto, 1fr) rem(12px);
+//         padding-inline-end: 10px;
+//     }
+
+//     .label-edit-container {
+//         padding-block-start: 16px;
+//         margin-block-start: 8px;
+//         padding-inline-start: 16px;
+//         padding-inline-end: 6px;
+//         display: grid;
+//         grid-auto-flow: column;
+//         // gap: 10px;
+//         width: min-content;
+
+//         .label-edit {
+//             position: relative;
+//             display: flex;
+//             align-items: center;
+//             outline: 1px solid #e6e9ef;
+//             border-radius: 4px;
+//             width: 152px;
+//             height: 32px;
+//             padding: 4px;
+
+//             .color-picker {
+//                 padding-block: 0;
+//                 position: absolute;
+//                 top: 28px;
+//                 left: -6px;
+//                 max-width: 152px;
+//             }
+
+//             .color-btn {
+//                 position: relative;
+//                 display: flex;
+//                 align-items: center;
+//                 cursor: pointer;
+//                 border: none;
+//                 border-radius: 4px;
+//                 margin-inline-end: 4px;
+//                 padding: 0;
+//                 width: 21%;
+//                 height: 24px;
+
+//                 .icon-container {
+//                     position: absolute;
+//                     top: 4px;
+//                     left: 50%;
+//                     transform: translate(-50%);
+//                 }
+
+//                 &:hover {
+//                     opacity: .85;
+//                 }
+//             }
+
+//             .label-input {
+//                 font-size: rem(14px);
+//                 color: $primary-text-color;
+//                 border: 0;
+//                 width: 100%;
+
+//                 &:focus-visible {
+//                     outline: none;
+//                 }
+//             }
+//         }
+
+//         .label-delete-container {
+//             display: flex;
+//             align-items: center;
+//             width: 26px;
+
+//             .delete-btn {
+//                 cursor: pointer;
+//                 position: relative;
+//                 display: flex;
+//                 align-items: center;
+//                 width: 16px;
+//                 height: 16px;
+//                 margin-inline-start: 3px;
+//                 border: 0;
+//                 border-radius: 2px;
+//                 color: $primary-text-color;
+//                 background-color: $primary-background-color;
+
+//                 &:hover {
+//                     background-color: $primary-background-hover-color;
+//                 }
+
+//                 .icon-container {
+//                     opacity: 100%;
+//                     position: absolute;
+//                     left: 50%;
+//                     transform: translate(-50%);
+//                     color: black;
+//                 }
+//             }
+//         }
+
+//         .add-btn {
+//             width: 152px;
+//             height: 32px;
+//             font-size: rem(14px);
+//             color: $primary-text-color;
+//             border: 0;
+//             outline: 1px solid #e6e9ef;
+
+//             .icon_1ce410ac46 {
+//                 width: 16px;
+//                 margin: 0;
+//             }
+//         }
+//     }
+
+//     .add-label-container {
+//         padding: 0 16px 8px 16px;
+//         width: 100%;
+
+//         .edit-btn {
+//             font-size: rem(14px);
+//             height: 32px;
+//             width: 100%;
+//         }
+//     }
+
+//     .divider-container {
+//         margin-block: 8px;
+//         padding-inline: 16px;
+
+//         .divider {
+//             width: 100%;
+//             margin: 0 auto;
+//         }
+//     }
+// }
+
+
+
+// .label-modal {
+//     z-index: 10;
+//     position: absolute;
+//     max-width: 880px;
+//     top: 42px;
+//     left: 50%;
+//     transform: translate(-50%);
+//     border-radius: 8px;
+//     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, .32);
+//     background-color: white;
+//     // width: min-content; // CHECK IF NEED
+//     // min-width: 200px; // CHECK IF NEED
+//     // height: max-content; // CHECK IF NEED
+
+//     .label-container {
+//         margin-block-start: 8px;
+//         padding: 16px 24px 16px;
+//         display: grid;
+//         grid-auto-flow: column;
+//         gap: 8px;
+//         // overflow-x: auto; // CHECK IT
+
+//         &:last-of-type {
+//             margin-bottom: 20px;
+//         }
+
+//         .label-btn {
+//             cursor: pointer;
+//             width: 152px;
+//             height: 32px;
+//             text-overflow: ellipsis;
+//             overflow: hidden;
+//             white-space: nowrap;
+//             font-size: rem(14px);
+//             border: none;
+//             border-radius: 2px;
+//             color: $text-color-on-primary;
+
+//             &:hover {
+//                 opacity: .85;
+//             }
+
+//             &:active {
+//                 transform: scale(.95);
+//             }
+
+//             .label {
+//                 text-overflow: ellipsis;
+//                 overflow: hidden;
+//                 white-space: nowrap;
+//             }
+//         }
+//     }
+
+//     .label-edit-container {
+//         padding-block-start: 16px;
+//         padding-block-end: 8px;
+//         // padding: 16px 24px 8px;
+//         // padding-inline-end: 24px;
+//         margin-block-start: 8px;
+//         display: grid;
+//         grid-auto-flow: column;
+//         gap: 8px;
+//         // max-height: 321px;
+
+//         .add-btn {
+//             width: 152px;
+//             height: 32px;
+//             font-size: rem(14px);
+//             color: $primary-text-color;
+//             border: 0;
+//             outline: 1px solid #e6e9ef;
+
+//             .icon_1ce410ac46 {
+//                 width: 16px;
+//                 margin: 0;
+//             }
+//         }
+
+//         .label-edit {
+//             position: relative;
+//             display: flex;
+//             align-items: center;
+//             outline: 1px solid #e6e9ef;
+//             border-radius: 4px;
+//             width: 152px;
+//             height: 32px;
+//             padding: 4px;
+
+//             .color-btn {
+//                 cursor: pointer;
+//                 border: none;
+//                 border-radius: 2px;
+//                 width: 33px; // SOMETHING WRONG
+//                 height: rem(24px);
+//                 margin-inline-end: 4px;
+//                 padding: 0;
+//             }
+
+//             .delete-btn {
+//                 // position: absolute;
+//                 // right: -rem(22px);
+//                 // top: 25%;
+//                 // margin-inline-start: 7px;
+//             }
+
+//             .icon {
+//                 width: 10px;
+//             }
+
+//             .color-picker {
+//                 padding-block: 0;
+//                 position: absolute;
+//                 top: 32px;
+//                 left: -6px;
+//                 max-width: 152px;
+//             }
+
+//             .edit-input {
+//                 margin-inline-start: 10px;
+//             }
+
+//             .label-input {
+//                 font-size: rem(14px);
+//                 color: $primary-text-color;
+//                 border: 0;
+//                 width: 100%;
+
+//                 &:focus-visible {
+//                     outline: none;
+//                 }
+//             }
+//         }
+//     }
+
+//     .add-label-container {
+//         padding: 0 16px 8px 16px;
+
+//         .edit-btn {
+//             font-size: rem(14px);
+//             width: 100%;
+//             height: 32px;
+//         }
+//     }
+
+//     .divider-container {
+//         margin-block-end: 8px;
+
+//         .divider {
+//             width: 82%;
+//             margin: 0 auto;
+//         }
+
+//     }
+// }

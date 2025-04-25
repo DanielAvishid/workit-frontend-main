@@ -1,0 +1,87 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Poppins', 'Roboto', 'Noto Sans Hebrew', 'Noto Kufi Arabic', 'Noto Sans JP', sans-serif;
+  color: $inverted-color-background;
+}
+
+
+p {
+  margin: 0
+}
+
+a {
+  text-decoration: none;
+  color: unset;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+span {
+  font-size: 0.875rem;
+  font-family: Figtree, Roboto, "Noto Sans Hebrew", "Noto Kufi Arabic", "Noto Sans JP", sans-serif;
+}
+
+input {
+  &:focus {
+    font-family: Figtree, Roboto, "Noto Sans Hebrew", "Noto Kufi Arabic", "Noto Sans JP", sans-serif;
+    outline: none;
+
+    &::placeholder {
+      transform: translate(0);
+    }
+  }
+}
+
+/* Dont stretch my Media */
+img,
+embed,
+video,
+object {
+  width: 100%;
+}
+
+table,
+th,
+tr,
+td {
+  font-weight: 400;
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+  border-spacing: 0;
+}
+
+/* Simple and useful CSS Debugging Technique */
+.debug * {
+  outline: 1px solid gold
+}
+
+a.active {
+  text-decoration: overline;
+}
+
+.monday-style-dialog-content-wrapper {
+  z-index: 1000;
+}
+
+::-webkit-scrollbar {
+  position: absolute;
+  width: 12px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgb(204, 204, 204);
+}

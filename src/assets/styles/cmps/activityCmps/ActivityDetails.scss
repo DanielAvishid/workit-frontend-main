@@ -1,0 +1,51 @@
+ .activity-details {
+     padding: 0 rem(25px);
+     overflow-y: auto;
+
+     >.automation-activity {
+         height: rem(48px);
+         font-size: rem(14px);
+         padding: rem(16px) rem(16px) rem(16px) rem(24px);
+         border-radius: rem(3px);
+         margin-top: rem(16px);
+         background-color: $members-border;
+
+         button {
+             color: $primary-color;
+         }
+     }
+
+
+     >.activity-filter {
+         margin: rem(24px) 0 rem(16px);
+
+         .filter-log {
+             margin-inline-end: rem(6px);
+             padding-inline-end: rem(4px);
+             width: auto;
+
+             >.icon {
+                 margin-inline-start: rem(6px);
+             }
+         }
+
+         input {
+             width: rem(150px);
+             margin: 0 rem(6px);
+         }
+
+         .person {
+             margin-inline-start: rem(18px);
+             color: $primary-text-color;
+
+             >.icon {
+                 margin-inline-end: rem(5px);
+                 padding-block-start: rem(2px);
+             }
+         }
+
+         .optios {
+             gap: rem(4px);
+         }
+     }
+ }

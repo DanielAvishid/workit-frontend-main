@@ -1,0 +1,115 @@
+.board-list-mobile {
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    background-color: $primary-background-color;
+    overflow: auto;
+
+    .logo {
+        text-align: center;
+        margin-block-end: 10px;
+
+        img {
+            height: 16px;
+            width: 26px;
+            margin-inline-end: 4px;
+        }
+
+        .logo-name {
+            font-size: rem(30px);
+            font-weight: 700;
+        }
+    }
+
+    .search-container {
+        position: relative;
+        display: grid;
+        grid-auto-flow: column;
+        align-items: center;
+        background-color: #e6e9ef;
+        margin-inline: 20px;
+        padding-block: 8px;
+        padding-inline: 4px;
+        border-radius: 8px;
+        margin-block-end: 16px;
+
+
+        .search-icon {
+            width: 20px;
+            height: 20px;
+            position: absolute;
+            width: min-content;
+            margin-inline-start: 4px;
+        }
+
+        .search-input {
+            margin-inline-start: 22px;
+            width: calc(100% - 20px);
+            border: none;
+            background-color: transparent;
+            font-size: rem(16px);
+            font-family: Figtree, Roboto, "Noto Sans Hebrew", "Noto Kufi Arabic", "Noto Sans JP", sans-serif;
+
+            &:focus-within {
+                outline: none;
+            }
+        }
+    }
+
+    .list {
+        background-color: $primary-background-color;
+        overflow: auto;
+
+        .board-preview {
+            position: relative;
+            display: grid;
+            grid-auto-flow: column;
+            margin-inline: 20px;
+            border-bottom: 1px solid #bec1c5;
+            margin-block-end: 10px;
+
+            .board-content {
+                display: flex;
+                align-items: center;
+
+                img {
+                    width: 100px;
+                    height: 70px;
+                    margin-inline-end: 10px;
+                }
+            }
+
+            .favorite-icon {
+                width: 20px;
+                height: 20px;
+                position: absolute;
+                right: 0;
+                bottom: 10px;
+
+                &.isFavorite {
+                    color: #ffcb00;
+                }
+            }
+
+        }
+
+    }
+
+    .add-btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: $primary-color;
+        padding: 22px;
+        border-radius: 50%;
+        right: 20px;
+        bottom: 10px;
+        position: fixed;
+
+        .add-icon {
+            width: 25px;
+            height: 25px;
+            color: $primary-background-color;
+        }
+    }
+}

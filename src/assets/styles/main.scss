@@ -1,0 +1,85 @@
+// Setup
+@import "setup/variables";
+@import "setup/functions";
+@import "setup/mixins";
+@import "setup/typography";
+
+// Base
+@import "base/helpers";
+@import "base/layout";
+@import "base/base";
+
+// Pages
+@import "pages/AppIndex.scss";
+@import "pages/BoardDetails.scss";
+@import "pages/TaskDetails.scss";
+@import "pages/Home.scss";
+@import "pages/BoardActivity.scss";
+@import "pages/Signup.scss";
+@import "pages/Login.scss";
+@import "pages/TaskDetailsMoblie.scss";
+
+// Cmps 
+@import "cmps/AppHeader.scss";
+@import "cmps/AppSidebar.scss";
+@import "cmps/GroupList.scss";
+@import "cmps/GroupPreview.scss";
+@import "cmps/TaskPreview.scss";
+@import "cmps/BoardHeader.scss";
+@import "cmps/Status.scss";
+@import "cmps/ProgressBar.scss";
+@import "cmps/MsgModalSuccess.scss";
+@import "cmps/DeletedBoardPage.scss";
+@import "cmps/BoardModal.scss";
+@import "cmps/MembersFilterModal.scss";
+@import "cmps/GroupPreviewCollapse.scss";
+@import "cmps/CheckboxModal.scss";
+@import "cmps/Dashboard.scss";
+@import "cmps/GroupFooter.scss";
+@import "cmps/GroupTitle.scss";
+@import "cmps/GroupHeader.scss";
+@import "cmps/TableHeader.scss";
+
+//dynamicCmps
+@import "cmps/dynamicCmps/LabelModal.scss";
+@import "cmps/dynamicCmps/TaskTitle.scss";
+@import "cmps/dynamicCmps/Members.scss";
+@import "cmps/dynamicCmps/Timeline.scss";
+@import "cmps/dynamicCmps/Priority.scss";
+@import "cmps/dynamicCmps/Status.scss";
+@import "cmps/dynamicCmps/DueDate.scss";
+
+//dynamicModalCmps
+@import "cmps/dynamicModalCmps/MemberModal.scss";
+@import "cmps/dynamicModalCmps/inviteMemberModal.scss";
+@import "cmps/dynamicModalCmps/TimelineModal.scss";
+
+//dynamicSummaryCmps
+@import "cmps/dynamicSummaryCmps/LabelsSummary.scss";
+
+//dashboardCharts
+@import "cmps/dashboardCharts/GroupListChart.scss";
+@import "cmps/dashboardCharts/LaunchDate.scss";
+@import "cmps/dashboardCharts/MembersChart.scss";
+@import "cmps/dashboardCharts/DoughnutChart.scss";
+
+//activityCmps
+@import "cmps/activityCmps/ActivityDetails.scss";
+@import "cmps/activityCmps/ActivityHeader.scss";
+@import "cmps/activityCmps/ActivityPreview.scss";
+
+//activityCmps
+@import "cmps/boardListCmps/BoardListDesktop.scss";
+@import "cmps/boardListCmps/BoardListMobile.scss";
+
+//homePageCmps
+@import "cmps/homePageCmps/HomePageHeader.scss";
+@import "cmps/homePageCmps/Hero.scss";
+@import "cmps/homePageCmps/HeroCTA.scss";
+@import "cmps/homePageCmps/Companies.scss";
+@import "cmps/homePageCmps/SideBySide.scss";
+@import "cmps/homePageCmps/ReviewCards.scss";
+@import "cmps/homePageCmps/HomePageFooter.scss";
+
+//utilsCmps
+@import "cmps/utilsCmps/AvatarGroupCmp.scss"

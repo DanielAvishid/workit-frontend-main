@@ -1,0 +1,125 @@
+.app-header {
+    position: relative;
+    padding-block: 10px;
+    padding-inline-start: 8px;
+    padding-inline-end: 34px;
+
+    .switcher-btn {
+        margin-inline-end: 4px;
+    }
+
+    .logo {
+        cursor: pointer;
+        font-weight: 300;
+
+        span {
+            color: $primary-text-color;
+            font-weight: 800;
+            font-size: rem(17px);
+        }
+    }
+
+    .search-btn {
+        margin-inline-start: 5px;
+    }
+
+    .apps-icon {
+        position: relative;
+
+        &::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            right: -4px;
+            transform: translate(-50%, -50%);
+            height: 22px;
+            width: .3px;
+            background-color: $table-border;
+            font-weight: 400;
+        }
+    }
+
+    .avatar-btn {
+        position: relative;
+        height: 32px;
+        cursor: pointer;
+        background-color: $avatar-btn-background-color;
+        border: 0;
+        display: flex;
+        align-items: center;
+        padding-inline-end: 28px;
+        border-radius: 4px;
+
+        &:hover {
+            background-color: $primary-background-hover-color;
+        }
+
+        &.open {
+            background-color: $primary-selected-color;
+        }
+
+        .logo-img {
+            transform: scaleX(-1) rotate(180deg);
+            width: 24px;
+            height: 24px;
+        }
+
+        .avatar {
+            position: absolute;
+            right: -10px;
+            width: 32px;
+            height: 32px;
+
+            .circleImg_7ac18ef8a4 {
+                border: none;
+            }
+        }
+
+        height: 32px;
+    }
+
+    .logout-modal {
+        position: fixed;
+        right: 24px;
+        top: 48px;
+        z-index: 1000;
+        padding: 8px;
+        width: 220px;
+        border-radius: 8px;
+        background-color: $primary-background-color;
+        box-shadow: 0 4px 17px 6px rgba(0, 0, 0, .1);
+
+        .logout-btn {
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            width: 100%;
+            height: rem(32px);
+            padding: rem(4px) rem(16px);
+            background-color: transparent;
+            border: 0;
+            border-radius: 4px;
+
+            &:hover {
+                background-color: $primary-background-hover-color;
+            }
+
+            >.logout-icon {
+                color: $primary-text-color;
+                margin-inline-end: 8px;
+            }
+
+            span {
+                color: $primary-text-color;
+                font-size: rem(14px);
+                font-family: Figtree, Roboto, "Noto Sans Hebrew", "Noto Kufi Arabic", "Noto Sans JP", sans-serif;
+                font-weight: 400;
+                line-height: rem(24px);
+            }
+        }
+    }
+
+    @include for-mobile-layout() {
+        display: none;
+    }
+}

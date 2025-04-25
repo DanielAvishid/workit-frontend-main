@@ -1,0 +1,224 @@
+.modal-full {
+    position: fixed;
+    inset: 0;
+    opacity: 1;
+    background: rgba(41, 47, 76, 0.7);
+    z-index: 1000;
+    transition: opacity .1s ease-in-out;
+
+    .modal-container {
+        z-index: 1100;
+        position: absolute;
+        inset: 50% auto auto 50%;
+        background-color: $primary-background-color;
+        overflow: hidden;
+        border-radius: 8px;
+        outline: none;
+        padding: 0;
+        height: 550px;
+        width: 850px;
+        max-height: 90vh;
+        max-width: 95vw;
+        transform: translate(-50%, -50%);
+        transition: all .4 ease 0s;
+        box-shadow: rgba(0, 0, 0, 0.7) 0 25px 50px -15px !important;
+        border: 0;
+
+        .close-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            top: 6px;
+            right: 8px;
+            cursor: pointer;
+            color: $primary-text-color;
+            z-index: 1100;
+            min-width: min-content;
+            width: 28.0625px;
+            height: 32px;
+            padding: 0;
+        }
+
+        .content-container {
+            height: 100%;
+
+            .container {
+                display: flex;
+                height: 100%;
+                vertical-align: baseline;
+
+                .left-container {
+                    display: flex;
+                    flex-direction: column;
+                    flex: auto;
+                    padding: 16px 32px 32px 32px;
+                    min-width: 62%;
+                    height: 100%;
+
+                    .heading {
+                        display: flex;
+                        align-items: center;
+                        // margin-block-start: 12px; //Media
+                        width: 100%;
+                        margin-inline-start: -4px;
+
+                        .edit-board-title {
+                            width: 100%;
+
+                            h1,
+                            .editableInputWrapper_8e7f29624b {
+                                overflow: hidden;
+                                text-overflow: ellipsis;
+                                white-space: nowrap;
+                                font-size: rem(32px);
+                                font-family: Poppins, Roboto, "Noto Sans Hebrew", "Noto Kufi Arabic", "Noto Sans JP", sans-serif;
+                                letter-spacing: -0.5px;
+                                line-height: rem(40px);
+                                width: 100%;
+                            }
+                        }
+                    }
+
+                    .description-container {
+                        height: 71%;
+                        max-height: 71%;
+                        overflow-y: auto;
+                        position: absolute;
+                        min-width: 460px;
+                        top: 78px;
+                        left: auto;
+                        max-width: 390px;
+
+                        &:hover {
+                            outline: 1px dashed $selectable-cluster-border;
+                        }
+
+                        &.input-focus {
+                            border-color: transparent;
+                        }
+
+                        .edit-description {
+                            padding: 0;
+
+                            .headingComponent_c12f87e3d8.singleLineEllipsis_134602c895 {
+                                padding: 2px;
+                                padding-inline: 3px;
+                                border: none;
+                                overflow: hidden;
+                            }
+
+                            .editableInputWrapper_8e7f29624b {
+                                padding: 2px;
+                                padding-inline: 3px;
+                                color: $primary-text-color;
+                                border: 0;
+                                outline: 1px solid $selectable-cluster-border;
+                                border-radius: 0px;
+                            }
+
+                            textarea {
+                                min-height: 100px;
+                            }
+                        }
+                    }
+
+                }
+
+                .info-container {
+                    display: flex;
+                    flex: initial;
+                    flex-direction: column;
+                    height: 100%;
+                    padding: 32px;
+                    background-color: $members-border;
+                    border-bottom-right-radius: 8px;
+                    border-top-right-radius: 8px;
+                    min-width: 38%;
+
+                    .title {
+                        color: $primary-text-color;
+                        font-size: rem(16px);
+                        font-weight: 500;
+                        margin-block-end: rem(24px);
+                        font-family: Figtree, Roboto, "Noto Sans Hebrew", "Noto Kufi Arabic", "Noto Sans JP", sans-serif;
+                        line-height: rem(24px);
+                    }
+
+                    .more-info {
+                        margin-block-end: rem(24px);
+                        line-height: 21px;
+
+                        h5 {
+                            font-size: rem(14px);
+                            font-weight: 400;
+                            font-family: Figtree, Roboto, "Noto Sans Hebrew", "Noto Kufi Arabic", "Noto Sans JP", sans-serif;
+                            color: $icon-secondary-color;
+                            margin-block-end: 8px;
+                        }
+
+                        .body {
+                            display: flex;
+                            align-items: center;
+
+                            p {
+                                margin-inline-start: 8px;
+                                text-align: start;
+                                font-size: rem(14px);
+                                font-weight: 400;
+                                font-family: Figtree, Roboto, "Noto Sans Hebrew", "Noto Kufi Arabic", "Noto Sans JP", sans-serif;
+                                line-height: 21px;
+                                color: $primary-text-color;
+                            }
+
+                            .workspace-icon {
+                                width: rem(24px);
+                                height: rem(24px);
+                                position: relative;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                background-color: $light_blue_special;
+                                border-radius: 8px;
+                                color: #fff;
+                                margin-inline-end: rem(3px);
+
+                                .letter {
+                                    vertical-align: baseline;
+                                    font-size: rem(16px);
+                                }
+
+                                .home-icon {
+                                    width: 14px;
+                                    color: black;
+                                    position: absolute;
+                                    top: 13px;
+                                    left: 17px;
+                                }
+                            }
+
+                            .avatar {
+                                width: 30px;
+                                height: 30px;
+                                margin-inline-end: 3px;
+                            }
+
+                            .board-info {
+                                display: flex;
+                                justify-content: baseline;
+
+                                .board-icon {
+                                    color: $icon-secondary-color;
+                                    width: 22px;
+                                    height: 22px;
+                                    padding-block-end: 5px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+}

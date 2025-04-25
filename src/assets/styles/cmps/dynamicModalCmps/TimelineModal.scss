@@ -1,0 +1,25 @@
+.date-picker-container {
+    white-space: pre-wrap;
+
+    >.date-picker-header {
+        height: rem(48px);
+        padding: 0 rem(16px);
+        border-block-end: 0.8px solid $selectable-cluster-border;
+
+        >span {
+            font-size: rem(16px);
+            font-weight: 500;
+        }
+    }
+
+    >.date-picker {
+        padding-block-start: rem(8px);
+
+    }
+
+    >.date-picker-footer {
+        border-block-start: 0.8px solid $selectable-cluster-border;
+        margin: 0 rem(32px);
+        padding: rem(12px) rem(7px);
+    }
+}

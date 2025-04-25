@@ -1,0 +1,17 @@
+.progress-bar {
+
+    .table-row {
+        margin-inline-start: rem(389px);
+        border-inline-start: 1px solid $table-border;
+        border-bottom-left-radius: 5px;
+        box-shadow: 0px 8px 9px -9px $table-shadow-color;
+    }
+}
+
+@media (max-width: 600px) {
+    .progress-bar {
+        .table-row {
+            margin-inline-start: rem(279px);
+        }
+    }
+}

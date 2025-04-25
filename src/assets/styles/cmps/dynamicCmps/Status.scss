@@ -1,0 +1,18 @@
+.status {
+
+    &>* {
+        color: white;
+    }
+
+    &.done {
+        background-color: rgb(0, 200, 117);
+    }
+
+    &.waiting-for-qa {
+        background-color: rgb(250, 161, 241);
+    }
+
+    &.working-on-it {
+        background-color: rgb(253, 171, 61);
+    }
+}

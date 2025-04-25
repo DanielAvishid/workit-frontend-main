@@ -1,0 +1,92 @@
+.group-preview {
+    grid-template-rows: repeat(3, min-content);
+    position: relative;
+    padding-block-end: 1.75rem;
+    background-color: $primary-background-color;
+
+    .table-container {
+        background-color: $primary-background-color;
+        border-inline-start: 6px solid;
+        padding-inline-end: 0.5rem;
+        min-width: calc(100vw - 317px);
+        // width: calc(100% - rem(40px));
+
+        &.first {
+            border-top-left-radius: 5px;
+        }
+
+        &.last {
+            border-bottom-left-radius: 5px;
+        }
+
+        .table-row {
+            border-block-end: 1px solid $table-border;
+            height: rem(36px);
+
+            .title-col,
+            .members-col,
+            .date-col,
+            .priority-col,
+            .status-col,
+            .timeline-col {
+                flex: 0 0 auto;
+                border-inline-end: 1px solid $table-border;
+                height: rem(36px);
+                position: relative;
+            }
+
+            .title-col {
+                width: rem(390px);
+
+                >.title-name,
+                >.checkbox {
+                    height: rem(36px);
+                }
+
+                >.checkbox {
+                    padding-inline-start: 0.5rem;
+                    border-inline-end: 1px solid $table-border;
+                }
+
+                >.title-name {
+                    width: 100%;
+                }
+            }
+
+            .members-col {
+                cursor: pointer;
+                width: rem(100px);
+            }
+
+
+            .date-col,
+            .priority-col,
+            .status-col,
+            .timeline-col {
+                cursor: pointer;
+                width: rem(140px);
+            }
+
+        }
+    }
+
+    .dnd-task {
+        cursor: default;
+    }
+}
+
+@media (max-width:600px) {
+    .title-col {
+        width: rem(280px) !important;
+
+        .open-details-container,
+        .collapse {
+            display: none;
+        }
+
+        h6 {
+            max-width: 190px;
+        }
+
+    }
+}

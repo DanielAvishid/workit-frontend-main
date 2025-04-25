@@ -1,0 +1,118 @@
+.activity-preview {
+    display: grid;
+    grid-template-columns: rem(60px) 2.8fr rem(16px) 1.2fr rem(16px) 2fr;
+    height: rem(55px);
+    padding: rem(8px) rem(8px) rem(8px) rem(16px);
+
+    >.activity-time {
+        grid-column: 1 / 2;
+        position: relative;
+
+        .time-text {
+            left: 18px;
+            max-width: 66%;
+        }
+    }
+
+    >.activity-place {
+        grid-column: 2 / 3;
+
+        // width: calc((100%/5)*2);
+        padding-inline-start: rem(36px);
+        position: relative;
+
+        >.avatar {
+            position: absolute;
+            left: 0;
+        }
+    }
+
+    .avatar {
+        width: rem(30px);
+        height: rem(30px);
+
+        .circle_4a0201e550 {
+            border: 0;
+        }
+    }
+
+
+    >.change-type {
+        grid-column: 4 / 5;
+        padding: 0 rem(2px) 0 rem(20px);
+
+        >.type-icon {
+            position: absolute;
+            left: 0;
+        }
+    }
+
+    >.group-value {
+
+        >.group-title {
+            padding-inline-start: rem(48px);
+        }
+    }
+
+    >.tasks-values,
+    >.group-value {
+        grid-column: 6 / 7;
+    }
+
+    >.change-values {
+        grid-column: 6 / 7;
+        display: grid;
+        grid-template-columns: 1fr rem(16px) 1fr;
+        align-items: center;
+
+        >* {
+            flex: 1;
+        }
+
+        >.avatar {
+            grid-column: 3 / 4;
+            display: flex;
+            align-self: center;
+        }
+
+        >.date-range {
+            height: rem(20px);
+            color: $white;
+            background-color: $default-task-val-bgc;
+            border-radius: rem(11px);
+
+            &.new-val {
+                background-color: $dark_dark_blue;
+            }
+
+            &.prev-val {
+                background-color: $darker_red;
+            }
+
+            >span {
+                font-size: rem(12px);
+            }
+        }
+
+        >.label-value {
+            height: rem(39px);
+            color: $white;
+            background-color: $default-task-val-bgc;
+            border-radius: rem(2px);
+        }
+
+
+        >.prev-val,
+        >.new-val {
+            padding: 0 rem(8px);
+        }
+
+        >.change-icon {
+            color: $default-task-val-bgc;
+        }
+    }
+
+    span {
+        font-family: "Roboto", sans-serif;
+    }
+}

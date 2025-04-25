@@ -1,0 +1,41 @@
+ .activity-header {
+     margin: rem(20px) rem(20px) 0 rem(20px);
+
+     >.close-container {
+         height: rem(32px);
+
+         max-width: rem(32px);
+
+         >.close-btn {
+             width: 28px !important;
+             height: 32px !important;
+
+             svg {
+                 width: rem(16px);
+                 height: rem(16px);
+             }
+
+         }
+     }
+
+     >.title-container {
+         height: rem(30px);
+         margin-block-end: rem(6px);
+
+         >.board-title,
+         >.activity-type {
+             padding-inline-start: rem(6px);
+             font-size: rem(20px);
+         }
+
+         >.board-title {
+             padding: 0 rem(2px);
+             font-weight: 700;
+         }
+
+         >.activity-type {
+             font-weight: 500;
+         }
+
+     }
+ }

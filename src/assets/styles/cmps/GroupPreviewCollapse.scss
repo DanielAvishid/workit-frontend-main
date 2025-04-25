@@ -1,0 +1,78 @@
+.collapse {
+
+    .table-container {
+        height: rem(60px);
+    }
+
+    .group-preview-collapse {
+        box-shadow: 0 8px 9px -9px $table-shadow-color;
+        height: rem(60px) !important;
+        border-block-start: 1px solid $table-border;
+
+        >* {
+            border-inline-end: 1px solid $table-border;
+        }
+
+        >.title-col {
+            height: rem(60px) !important;
+            width: rem(390px);
+            padding: rem(4px) rem(8px) rem(8px) 0;
+
+            .Collapse-group {
+                margin-inline-start: rem(8px);
+            }
+
+            .count {
+                color: $chat-icon-color;
+                font-size: rem(13px);
+                margin-inline-start: rem(32px);
+            }
+        }
+
+        .cmp-title {
+            color: $chat-icon-color;
+        }
+
+        .members-container {
+            >* {
+                visibility: hidden;
+            }
+        }
+
+        .members-col,
+        .date-col,
+        .priority-col,
+        .status-col,
+        .timeline-col {
+            border-inline-end: none !important;
+        }
+
+
+
+
+        .avatar-group-cmp {
+            visibility: hidden;
+        }
+    }
+
+    .group-menu-container {
+        margin-inline-end: 4px;
+    }
+
+    .group-menu {
+        margin-block-start: rem(6px);
+        opacity: 0;
+        height: 24px;
+        width: 24px;
+
+        >* {
+            z-index: 100;
+        }
+    }
+
+    &:hover {
+        .group-menu {
+            opacity: 1;
+        }
+    }
+}

@@ -1,0 +1,52 @@
+.home-page {
+    position: relative;
+    display: grid;
+
+    .big-img-section {
+        padding-block-start: 20px;
+        margin-block-end: 80px;
+        min-height: auto;
+        width: 100%;
+        max-width: none;
+        display: flex;
+        justify-content: center;
+
+        .big-img {
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    .phone {
+        display: none !important;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .home-page {
+        overflow-x: hidden;
+
+        .big-img-section {
+            width: 100vw;
+            padding-block-start: 80px;
+            margin-block-end: 20px;
+
+            .big-img {
+                width: 650px;
+            }
+        }
+
+        li {
+            width: 140px !important;
+        }
+
+        .phone {
+            display: block !important;
+        }
+
+        .desktop {
+            display: none !important;
+        }
+    }
+}

@@ -1,0 +1,38 @@
+.deleted-board-page {
+    text-align: center;
+    margin-block-start: 200px;
+
+    img {
+        position: relative;
+        padding-top: 3%;
+        width: 340px;
+        height: 340px;
+        left: -56px;
+    }
+
+    .title {
+        font-size: rem(24px);
+        font-weight: 700;
+        font-family: Figtree, Roboto, "Noto Sans Hebrew", "Noto Kufi Arabic", "Noto Sans JP", sans-serif;
+        margin-block-end: rem(12px);
+    }
+
+    .subtitle {
+        span {
+            font-size: rem(16px);
+            font-family: Figtree, Roboto, "Noto Sans Hebrew", "Noto Kufi Arabic", "Noto Sans JP", sans-serif;
+
+            a {
+                color: $a-secondary-color;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+
+    .back-btn {
+        margin-block-start: rem(16px);
+    }
+}

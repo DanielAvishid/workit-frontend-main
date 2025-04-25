@@ -1,0 +1,111 @@
+.flex {
+    display: flex;
+}
+
+.flex.column {
+    flex-direction: column;
+}
+
+.flex.justify-center {
+    justify-content: center;
+}
+
+.flex.justify-end {
+    justify-content: end;
+}
+
+
+.flex.align-center {
+    align-items: center;
+}
+
+.flex.justify-between {
+    justify-content: space-between;
+}
+
+// GRID
+
+.grid {
+    display: grid;
+}
+
+.grid.align-center {
+    align-items: center;
+}
+
+.grid.justify-center {
+    justify-content: center;
+}
+
+// POSITION 
+
+.relative {
+    position: relative;
+}
+
+// MODAL
+
+.pointer {
+    position: absolute;
+    z-index: 100;
+    top: rem(-5px);
+    left: calc(50% - rem(8px));
+    height: rem(16px);
+    width: rem(16px);
+    background-color: $primary-background-color;
+    transform: rotate(45deg);
+}
+
+.modal {
+    height: fit-content;
+    position: absolute;
+    top: rem(42px);
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 0.5rem;
+    box-shadow: 0 8px 16px 0 $modal-shadow-color;
+    z-index: 100;
+    background-color: $white;
+}
+
+// GAP
+
+.gap4 {
+    gap: 4px;
+}
+
+// BORDER
+
+.focus {
+    outline-offset: -1px;
+    outline: 1px solid $primary-color;
+
+    // &::after {
+    //     position: absolute;
+    //     content: '';
+    //     pointer-events: none;
+    //     top: 0;
+    //     left: 0;
+    //     width: 100%;
+    //     height: 100%;
+    //     outline-offset: -1px;
+    //     outline: 1px solid $primary-color;
+    // }
+
+    &.title-col {
+        // margin-inline-start: 0;
+        border-inline-start: 0 !important;
+    }
+
+
+}
+
+// LONG TEXT
+
+.ellipsis-text {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    position: absolute;
+    max-width: 85%;
+}

@@ -1,0 +1,26 @@
+.app-index {
+    display: grid;
+    grid-template-rows: 48px calc(100vh - 48px);
+    height: 100vh;
+    background-color: $grey-background-color;
+    overflow-y: hidden;
+
+    >.main-container {
+        position: relative;
+        display: grid;
+        grid-template-columns: auto 1fr;
+        gap: 10px;
+    }
+
+    @include for-mobile-layout() {
+        display: block;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .app-index {
+        background-color: $primary-background-color;
+    }
+
+}

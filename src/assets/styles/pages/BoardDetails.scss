@@ -1,0 +1,58 @@
+.board-details {
+    grid-template-rows: min-content auto;
+    position: relative;
+    background-color: $primary-background-color;
+    border-top-left-radius: rem(8px);
+    overflow-y: auto;
+
+    .loader-container {
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -40%);
+        width: 90px;
+        height: 90px;
+    }
+}
+
+@media (max-width: 600px) {
+    .board-details {
+        width: 100vw;
+        height: 100vh;
+        overflow-x: auto;
+    }
+}
+
+.board-details-mobile {
+    background-color: $primary-background-color;
+    width: 100vw;
+    height: 100vh;
+    padding-block-start: 10px;
+
+    .header {
+
+        .board-options {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-inline: 10px;
+
+            .arrow-icon {
+                width: 30px;
+                height: 30px;
+            }
+
+            .board-title-input {
+                h1 {
+                    font-weight: bold;
+                    font-size: 1px;
+                }
+
+
+                font-weight: 700;
+                text-align: center;
+            }
+        }
+    }
+
+}

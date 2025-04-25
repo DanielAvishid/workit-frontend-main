@@ -1,0 +1,25 @@
+.members-chart-container {
+    display: flex;
+    align-items: center;
+    border-radius: rem(8px);
+    background-color: $primary-background-color;
+    border: 1px solid $table-border;
+    overflow: hidden;
+
+    >.header {
+        padding: rem(10px);
+        background-color: $primary-background-color;
+        width: 100%;
+        border-block-end: 0.8px solid $table-border;
+    }
+
+    .chart-container {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: rem(40px) rem(20px) rem(20px) rem(20px);
+        // height: 100%;
+    }
+}

@@ -1,0 +1,54 @@
+.group-footer {
+
+    .add-task {
+
+        .title-col {
+            border-inline-end: 0 !important;
+            box-shadow: 0 8px 9px -9px $table-shadow-color;
+            position: relative;
+
+            .guidance {
+                position: absolute;
+                bottom: rem(-24px);
+                left: rem(60px);
+                font-size: rem(13px);
+                color: $chat-icon-color;
+            }
+        }
+
+        input[type="text"] {
+            background-color: transparent;
+            border: none;
+            outline: none;
+            font-size: 0.875rem;
+            // padding: 5px 1.625rem;
+            font-family: Figtree, Roboto, "Noto Sans Hebrew", "Noto Kufi Arabic", "Noto Sans JP", sans-serif;
+            border-radius: 3px;
+            margin: 6px 10px;
+            padding: 2px 0 3px 1rem;
+            width: 100%;
+
+            &:focus {
+                background-color: $primary-background-color;
+                outline: 1px solid $primary-color;
+            }
+        }
+
+        &:hover:not(:focus-within) {
+
+            .table-row {
+                background-color: $lighter-grey;
+                box-shadow: 4px 3px 6px -3px $selectable-cluster-border;
+            }
+
+
+            input {
+                outline: 1px solid $table-border;
+            }
+        }
+
+        >.focus-bgc {
+            background-color: $primary-selected-color;
+        }
+    }
+}

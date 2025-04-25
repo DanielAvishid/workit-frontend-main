@@ -1,0 +1,45 @@
+.empty {
+    background-color: $negative-color;
+
+    .clickable_a1c09750fe {
+        color: $primary-background-color;
+        width: rem(75px);
+        height: rem(75px);
+        border-radius: 50%;
+    }
+
+}
+
+.nothing {
+    background-color: $negative-color;
+
+    .clickable_a1c09750fe {
+        color: $primary-background-color;
+        width: rem(90px);
+        height: rem(90px);
+        border-radius: 50%;
+    }
+}
+
+.all {
+    background-color: $positive-color;
+
+    .clickable_a1c09750fe {
+        color: $primary-background-color;
+        width: rem(75px);
+        height: rem(75px);
+        border-radius: 50%;
+    }
+}
+
+.big-icon {
+    margin: rem(2.5px);
+    width: rem(95px);
+    height: rem(95px);
+    border-radius: 50%;
+}
+
+canvas {
+    width: rem(100px);
+    height: rem(100px);
+}

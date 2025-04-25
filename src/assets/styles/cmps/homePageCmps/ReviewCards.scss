@@ -1,0 +1,115 @@
+.review-cards-section {
+    padding-block-start: 80px;
+    padding-block-end: 100px;
+    max-width: 1440px;
+    margin: auto;
+    padding-block-end: 100px;
+
+    .title-container {
+        display: grid;
+        justify-content: center;
+        margin-block-end: 20px;
+
+        .stars-container {
+            display: flex;
+            justify-content: center;
+            width: max-content;
+            height: 20px;
+            margin: auto;
+            margin-block-end: 24px;
+        }
+
+        h2 {
+            margin-block-end: 16px;
+
+            b {
+                font-size: rem(36px);
+                font-family: Poppins, Roboto, Helvetica, Arial, sans-serif;
+                text-align: center;
+                color: #333;
+            }
+        }
+
+        p {
+            color: #333;
+            font-size: 1.125rem;
+            font-family: Poppins, Roboto, Helvetica, Arial, sans-serif;
+            line-height: rem(32px);
+            text-align: center;
+            font-weight: 300;
+        }
+
+    }
+
+    .review-cards {
+        margin: auto;
+        display: grid;
+        grid-auto-flow: column;
+        justify-content: center;
+        align-items: center;
+
+        .review-card {
+            position: relative;
+            width: 286px;
+            z-index: 100;
+            margin: 32px 10px 0;
+            padding: 32px;
+            border-radius: 8px;
+            background-color: $primary-background-color;
+            box-shadow: 0px 8px 24px 0 rgba(29, 140, 242, 0.16);
+            transition: filter 0.2s ease-in-out;
+            color: #333333;
+
+            &:hover {
+                box-shadow: 0px 8px 24px 0 rgba(29, 140, 242, 0.32);
+            }
+
+            .img-container {
+                display: grid;
+                justify-content: center;
+                align-items: center;
+                margin-block-end: 16px;
+                height: 100px;
+
+                .img {
+                    max-height: 100px;
+                    max-width: 206px;
+                }
+            }
+
+            .first-text {
+                color: #515151;
+                font-size: 1.125rem;
+                line-height: 24px;
+                letter-spacing: -0.5px;
+                font-weight: 400;
+                margin-block-end: 24px;
+                min-height: 64px;
+                text-align: center;
+                font-family: Poppins, Roboto, Helvetica, Arial, sans-serif;
+            }
+
+            .second-text {
+                font-family: Poppins, Roboto, Helvetica, Arial, sans-serif;
+                font-size: rem(16px);
+                line-height: 24px;
+                text-align: center;
+                color: #515151;
+                font-weight: 300;
+            }
+        }
+    }
+}
+
+@media (max-width: 600px) {
+    .review-cards-section {
+        max-width: 100vw;
+        padding: 0 rem(32px);
+        white-space: pre-wrap;
+        word-wrap: break-word;
+        padding-block-start: 60px;
+        padding-block-end: 100px;
+        text-align: center;
+        margin: 0;
+    }
+}
